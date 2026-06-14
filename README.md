@@ -1,55 +1,52 @@
-# markdown-AI-
+# Markdown 编辑器
 
-Markdown AI 编辑与转换工具
+一个简洁的浏览器端 Markdown 编辑器，支持实时预览。
 
----
+## 功能
 
-## 30 秒了解这个项目
+- Markdown 实时预览（基于 marked.js）
+- 工具栏：粗体、斜体、标题、链接、图片、列表、代码块
+- 快捷键支持（Ctrl+B/I/K/L/P/S/O）
+- 本地文件打开与保存
+- 编辑器与预览区域同步滚动
+- 状态栏：行号、列号、字数、阅读时间估算
 
-| 维度 | 内容 |
-|------|------|
-| 项目类型 | AI/Agent 项目 |
-| 技术栈 | JavaScript/Node.js |
-| 核心功能 | Markdown AI 编辑与转换工具 |
-| 适用场景 | 个人学习、原型验证、工具辅助 |
+## 使用
 
----
+直接在浏览器中打开 `index.html` 即可。
 
-## 30-Second Project Overview
-
-| Dimension | Content |
-|------|------|
-| Project Type | AI/Agent Project |
-| Tech Stack | JavaScript/Node.js |
-| Core Function | Markdown AI 编辑与转换工具 |
-| Use Cases | Learning, prototyping, tool assistance |
-
----
-
-## 快速开始
-
-```bash
-# Python
-pip install -r requirements.txt && python app.py
-
-# Node.js
-npm install && npm start
-```
-
----
+无需安装、无需构建、无需服务器。
 
 ## 项目结构
+
 ```
-├── src/          # 源代码
-├── tests/        # 测试
-└── README.md     # 项目说明
+├── index.html          # 入口页面
+├── css/style.css       # 样式
+├── js/main.js          # 编辑器逻辑
+├── js/marked.min.js    # Markdown 解析库
+├── 帮助.md             # 使用帮助
+└── README.md           # 本文件
 ```
 
----
+## 快捷键
+
+| 快捷键 | 功能 |
+|--------|------|
+| Ctrl + B | 粗体 |
+| Ctrl + I | 斜体 |
+| Ctrl + K | 插入链接 |
+| Ctrl + Shift + I | 插入图片 |
+| Ctrl + L | 插入列表 |
+| Ctrl + Shift + C | 插入代码块 |
+| Ctrl + P | 切换预览模式 |
+| Ctrl + S | 保存文件 |
+| Ctrl + O | 打开文件 |
+
+## 技术栈
+
+- HTML / CSS / 原生 JavaScript
+- [marked.js](https://github.com/markedjs/marked) — Markdown 解析
 
 ## 许可证
-MIT License
 
----
-*最后更新: 2026-05-23*
-*作者: 121212165*
+MIT

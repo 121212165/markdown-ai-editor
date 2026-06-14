@@ -3,53 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown编辑器</title>
+    <title>Markdown 编辑器</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <!-- 标题栏 -->
         <header class="toolbar">
             <div class="toolbar-group">
-                <button id="bold-btn" title="粗体 (Ctrl+B)">B</button>
-                <button id="italic-btn" title="斜体 (Ctrl+I)">I</button>
+                <button id="bold-btn" title="粗体 (Ctrl+B)"><strong>B</strong></button>
+                <button id="italic-btn" title="斜体 (Ctrl+I)"><em>I</em></button>
                 <button id="heading-btn" title="标题">#</button>
-                <button id="link-btn" title="链接 (Ctrl+K)">🔗</button>
-                <button id="image-btn" title="图片 (Ctrl+Shift+I)">🖼️</button>
-                <button id="list-btn" title="列表 (Ctrl+L)">☰</button>
-                <button id="code-btn" title="代码块 (Ctrl+Shift+C)">💻</button>
+                <button id="link-btn" title="链接 (Ctrl+K)">&#128279;</button>
+                <button id="image-btn" title="图片 (Ctrl+Shift+I)">&#128444;</button>
+                <button id="list-btn" title="列表 (Ctrl+L)">&#9776;</button>
+                <button id="code-btn" title="代码块 (Ctrl+Shift+C)">&lt;/&gt;</button>
             </div>
             <div class="toolbar-group">
-                <button id="preview-btn" title="预览切换 (Ctrl+P)">👁️</button>
-                <button id="save-btn" title="保存 (Ctrl+S)">💾</button>
-                <button id="open-btn" title="打开 (Ctrl+O)">📂</button>
+                <button id="preview-btn" title="预览切换 (Ctrl+P)">&#128065;</button>
+                <button id="save-btn" title="保存 (Ctrl+S)">&#128190;</button>
+                <button id="open-btn" title="打开 (Ctrl+O)">&#128194;</button>
             </div>
         </header>
 
-        <!-- 主体内容区域 -->
         <div class="main-content">
-            <!-- 文件树 -->
-            <aside class="sidebar file-tree">
-                <h3>文件树</h3>
-                <div id="file-tree-container"></div>
-                <button id="new-file-btn">新建文件</button>
-            </aside>
-
-            <!-- 编辑器区域 -->
             <main class="editor-container">
-                <div class="tabs">
-                    <div class="tab active">未命名.md</div>
-                </div>
                 <textarea id="editor" placeholder="在此输入Markdown内容..."></textarea>
             </main>
-
-            <!-- 预览区域 -->
             <aside class="preview-container">
                 <div id="preview"></div>
             </aside>
         </div>
 
-        <!-- 状态栏 -->
         <footer class="status-bar">
             <div class="status-item">行: 1, 列: 1</div>
             <div class="status-item">字数: 0</div>

@@ -1,7 +1,5 @@
-// 获取DOM元素
 const editor = document.getElementById('editor');
 const preview = document.getElementById('preview');
-const fileTreeContainer = document.getElementById('file-tree-container');
 
 // 初始化marked
 marked.setOptions({
@@ -188,32 +186,3 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// 创建示例文件树
-function createFileTree() {
-    fileTreeContainer.innerHTML = `
-        <div class="file-item folder">文档</div>
-        <div class="file-item file active">未命名.md</div>
-        <div class="file-item file">示例.md</div>
-        <div class="file-item file">帮助.md</div>
-    `;
-}
-
-// 初始化文件树
-createFileTree();
-
-// 文件树点击事件
-fileTreeContainer.addEventListener('click', function(e) {
-    if (e.target.classList.contains('file')) {
-        document.querySelectorAll('.file-item').forEach(item => {
-            item.classList.remove('active');
-        });
-        e.target.classList.add('active');
-    }
-});
-
-// 新建文件
-document.getElementById('new-file-btn').addEventListener('click', function() {
-    editor.value = '';
-    updatePreview();
-    document.querySelector('.tab').textContent = '未命名.md';
-});
